@@ -37,7 +37,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <a href="#buy" className="px-6 py-2 rounded-full bg-gradient-to-r from-gold-primary to-gold-secondary text-bg-primary font-orbitron font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.3)]">
+        <a href="https://pump.fun/coin/3S8whFsZJyDSdqTi7UUYKJ61Ad658XztaHXwZUAbpump" target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded-full bg-gradient-to-r from-gold-primary to-gold-secondary text-bg-primary font-orbitron font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,215,0,0.3)]">
           BUY NOW
         </a>
       </div>

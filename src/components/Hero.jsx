@@ -5,10 +5,10 @@ import Countdown from './Countdown';
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
-  const contractAddress = "COMING SOON...";
+  const contractAddress = "3S8whFsZJyDSdqTi7UUYKJ61Ad658XztaHXwZUAbpump";
+  const pumpFunLink = "https://pump.fun/coin/3S8whFsZJyDSdqTi7UUYKJ61Ad658XztaHXwZUAbpump";
 
   const handleCopy = () => {
-    if (contractAddress === "COMING SOON...") return;
     navigator.clipboard.writeText(contractAddress);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -46,8 +46,8 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-          <a href="#buy" className="px-8 py-4 rounded-full bg-gradient-to-r from-green-pump to-green-600 text-bg-primary font-orbitron font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,255,136,0.4)] flex items-center gap-2">
-            🚀 SEND IT NOW
+          <a href={pumpFunLink} target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-gradient-to-r from-green-pump to-green-600 text-bg-primary font-orbitron font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,255,136,0.4)] flex items-center gap-2">
+            🚀 BUY ON PUMP.FUN
           </a>
           <a href="#chart" className="px-8 py-4 rounded-full border-2 border-gold-primary text-white font-orbitron font-bold text-lg hover:bg-gold-primary hover:text-bg-primary transition-all shadow-[0_0_20px_rgba(255,215,0,0.2)]">
             📈 VIEW CHART
@@ -57,8 +57,10 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-2">
           <span className="text-gray-400 text-sm">Contract Address:</span>
           <div className="flex items-center gap-2 bg-bg-card border border-gold-primary/20 px-4 py-2 rounded-lg hover:border-gold-primary/50 transition-colors">
-            <span className="font-mono text-gold-primary">{contractAddress}</span>
-            <button onClick={handleCopy} className="text-gray-400 hover:text-white transition-colors">
+            <a href={pumpFunLink} target="_blank" rel="noopener noreferrer" className="font-mono text-gold-primary hover:text-gold-secondary transition-colors text-xs md:text-base truncate max-w-[200px] md:max-w-none">
+              {contractAddress}
+            </a>
+            <button onClick={handleCopy} className="text-gray-400 hover:text-white transition-colors flex-shrink-0">
               {copied ? <Check size={18} /> : <Copy size={18} />}
             </button>
           </div>
